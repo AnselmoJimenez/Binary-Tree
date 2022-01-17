@@ -15,10 +15,11 @@ typedef struct node {
 typedef struct tree {
     node_t *root;
     int count;
+    int level;
 } binary_tree_t;
 
 // Create the binary tree
-binary_tree_t createBinaryTree();
+binary_tree_t *createBinaryTree();
 
 // Destroy the binary tree
 void destroyBinaryTree();
@@ -30,7 +31,7 @@ void insert(binary_tree_t *tree, int data);
 void delete(binary_tree_t *tree, int data);
 
 // Finds a node in the tree
-node_t find(binary_tree_t *tree, int data);
+node_t *find(binary_tree_t *tree, int data);
 
 // prints tree
 void printTree(binary_tree_t *tree);
